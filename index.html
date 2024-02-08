@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="exportar-excel">Exportar para Excel</button>
+    <button id="exportar-json">Exportar para JSON</button>
+    <input type="file" id="importar-json">
+
+    <div style="margin-left: -75%;">
+
+    <div id="movimentacao">
+        <h2>Entrada/Saída de Produtos</h2>
+        <form id="form-movimentacao">
+            <label for="nome-item">Nome do Item:</label>
+            <input type="text" id="nome-item" required>
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" required>
+            <label for="data-validade">Data de Validade (Mês/Ano):</label>
+            <input type="month" id="data-validade" required>
+            <br>
+            <br>
+            <label for="tipo-movimentacao">Tipo de Movimentação:</label>
+            <select id="tipo-movimentacao" required>
+                <option value="entrada">Entrada</option>
+                <option value="saida">Saída</option>
+            </select>
+            <br><br>
+            <button type="submit">Registrar Movimentação</button>
+        </form>
+    </div>
+
+    </div>
+
+    <div style="margin-top: -20%;">
+
+    <button id="alternar-tabela">Ver Movimentações</button>
+
+    <h1>Controle de Estoque</h1>
+    
+    <div id="estoque" style="display: block;">
+        <h2>Estoque Atual</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantidade</th>
+                    <th>Data de Validade</th>
+                </tr>
+            </thead>
+            <tbody id="estoque-corpo">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="historico" style="display: none; margin-right: 30%;">
+        <h2>Histórico de Movimentações</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Item</th>
+                    <th>Tipo</th>
+                    <th style="width: 10%;">Qnt</th>
+                </tr>
+            </thead>
+            <tbody id="historico-corpo">
+            </tbody>
+        </table>
+    </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.4/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
