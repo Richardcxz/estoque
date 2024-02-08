@@ -215,3 +215,18 @@ function confirmarSaida(event) {
 
 window.addEventListener('beforeunload', confirmarSaida);
 
+function apagarCookies() {
+    const confirmacao = confirm("Tem certeza que deseja apagar os cookies? Isso limpará todos os dados armazenados.");
+
+    if (confirmacao) {
+        document.cookie = "estoque=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "historicoMovimentacoes=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+        estoque = [];
+        historicoMovimentacoes = [];
+        atualizarEstoque();
+        atualizarHistorico();
+    }
+}
+
+document.getElementById('apagar-cookies').addEventListener('click', apagarCookies);
