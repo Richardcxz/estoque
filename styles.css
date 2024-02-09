@@ -2,43 +2,50 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #0F0F0F;
-    color: rgb(255, 255, 255);
+    background-color: #1a1a1a; /* mudança de cor de fundo */
+    color: #fff;
     font-family: Inter, sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
 h1, h2 {
     text-align: center;
+    font-weight: 600; /* adiciona peso à fonte */
+}
+
+h1 {
+    font-size: 36px; /* aumenta o tamanho do título */
+}
+
+h2 {
+    font-size: 24px; /* diminui o tamanho do subtítulo */
 }
 
 table {
     display: inline-block;
-    max-width: 50%;
+    max-width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
 table, th, td {
-    border: 1px solid white;
+    border: 1px solid #fff; /* mudança de cor das bordas */
+    color: #fff;
 }
 
 th, td {
-    padding: 8px;
+    padding: 12px; /* aumenta o espaçamento interno */
     text-align: left;
-    width: min-content;
 }
 
 form {
     margin: 0 auto;
-    display: inline-block;
-    max-width: 50%;
-    width: min-content;
+    display: block;
+    max-width: 100%;
 }
 
 form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px; /* aumenta o espaçamento inferior */
 }
 
 #movimentacao {
@@ -53,10 +60,10 @@ form label {
 }
 
 #historico table, #historico th, #historico td {
-    border: 1px solid white;
+    border: 1px solid #fff; /* mudança de cor das bordas */
 }
 
 #historico th, #historico td {
-    padding: 8px;
+    padding: 12px; /* aumenta o espaçamento interno */
     text-align: left;
 }
