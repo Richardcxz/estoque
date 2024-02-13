@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de Estoque</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div style="margin-left: -75%;">
 
     <div id="movimentacao">
+        <br><br>
         <h2>Entrada/Saída de Produtos</h2>
         <form id="form-movimentacao">
             <label for="nome-item">Nome do Item:</label>
             <input type="text" id="nome-item" required>
+            <br><br>
             <label for="quantidade">Quantidade:</label>
             <input type="number" id="quantidade" required>
+            <br><br>
             <label for="data-validade">Data de Validade (Mês/Ano):</label>
             <input type="month" id="data-validade" required>
             <br>
@@ -26,6 +29,8 @@
                 <option value="entrada">Entrada</option>
                 <option value="saida">Saída</option>
             </select>
+            <br><br>
+            <input type="checkbox" id="addhistorico">Não é movimentação</input>
             <br><br>
             <button type="submit">Registrar Movimentação</button>
         </form>
@@ -42,7 +47,9 @@
 
     </div>
 
-    <div style="margin-top: -35%;">
+    <div id="mainst" style="margin-top: -35%;">
+
+    <br>
 
     <button id="alternar-tabela">Ver Movimentações</button>
 
@@ -63,7 +70,7 @@
         </table>
     </div>
 
-    <div id="historico" style="display: none; margin-right: 30%;">
+    <div id="historico" style="display: none; margin-right: 15%;">
         <h2>Histórico de Movimentações</h2>
         <table>
             <thead>
@@ -71,7 +78,7 @@
                     <th>Data</th>
                     <th>Item</th>
                     <th>Tipo</th>
-                    <th style="width: 10%;">Qnt</th>
+                    <th>Quantidade</th>
                 </tr>
             </thead>
             <tbody id="historico-corpo">

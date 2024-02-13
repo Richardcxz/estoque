@@ -99,7 +99,9 @@ document.getElementById('form-movimentacao').addEventListener('submit', function
 
     if (tipoMovimentacao === 'entrada') {
         adicionarItem(nomeItem, quantidade, dataValidade);
-        adicionarEntradaHistorico(nomeItem, quantidade);
+        if (!document.getElementById("addhistorico").checked) {
+            adicionarEntradaHistorico(nomeItem, quantidade);
+        }        
     } else if (tipoMovimentacao === 'saida') {
         const index = estoque.findIndex(item => item.nome === nomeItem && item.quantidade >= quantidade && item.dataValidade === dataValidade);
         if (index !== -1) {

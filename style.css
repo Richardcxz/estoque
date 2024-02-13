@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #dfd5d5;
+    background-blend-mode: overlay;
+    color: rgb(0, 0, 0);
+    font-family: Inter, sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+button {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+table {
+    display: inline-block;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #000000;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+form {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #000000;
+    background-color: transparent;
+    color: #000000;
+    margin-bottom: 0 auto;
+    padding: 5px;
+    width: auto;
+    resize: none;
+}
+
+#movimentacao {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 26px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.8px);
+    -webkit-backdrop-filter: blur(10.8px);
+    background-blend-mode: multiply;
+    width: 14%;
+    margin-left: 42%; 
+    height: 800px; 
+    position: relative;
+}
+
+#mainst {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 35%;
+    margin-left: 45%;
+}
+
+#historico {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 20px);
+    margin-left: 25%;
+}
+
+#historico table, #historico th, #historico td {
+    border: 1px solid #000000;
+}
+
+#historico th, #historico td {
+    padding: 12px;
+    text-align: left;
+}
